@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Name Analyser
+
+Welcome to Name Analyser! This application predicts the origin country, gender, and age associated with a given name. It's built using Next.js and Tailwind CSS.
+
+## Overview
+
+This project was inspired by a YouTube tutorial which provided the initial idea and guidance. 
+
+Name Analyser utilises various APIs to provide accurate predictions regarding the origin, gender, and age of a given name. The main features include:
+
+- Prediction of the country of origin based on the given name.
+- Prediction of the gender associated with the name.
+- Estimation of the age group typically associated with the name.
 
 ## Getting Started
 
-First, run the development server:
+To run this application locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository to your local machine.
+   ```bash
+   git clone https://github.com/your-username/name-analyser.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory.
+   ```bash
+   cd my-app
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install the dependencies.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Start the development server.
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-To learn more about Next.js, take a look at the following resources:
+## APIs Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This application relies on the following APIs:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Name Origin API**: This API predicts the country of origin based on the provided name.
+  - [Link to API](https://nationalize.io/)
 
-## Deploy on Vercel
+- **Gender Prediction API**: This API predicts the gender associated with the provided name.
+  - [Link to API](https://genderize.io/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Age Age Estimation API**: This API estimates the age group associated with the provided name.
+  - [Link to API](https://agify.io/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Country Translation API**: This API translates the country code to its full name. (This is an addition and not covered in the YouTube tutorial)
+  - [Link to API](https://restcountries.com)
+
+## Usage
+
+Once the application is running, you can simply enter a name into the input field and click the "Analyse" button. The application will then display predictions regarding the name's origin country, gender, and age group.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or want to improve the application, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to customize this README according to your project's specific details and requirements!
