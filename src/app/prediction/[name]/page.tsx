@@ -80,15 +80,12 @@ export default async function Page({ params }: apiParam) {
   await fetchCountryNames();
 
   return (
-    <div>
-      <div>
-        <div>
-          {" "}
-          Personal info
-        </div>
-        <div> Age: {age?.age} </div>
-        <div> Gender: {gender?.gender} </div>
-        <div>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="p-12 shadow-md bg-gray-100 rounded-md">
+      <h1 className="text-3xl text-center font-semibold mb-8 text-black"> Name Analyser</h1>
+      
+        <div className="text-1xl text-black"> Age: {age?.age} </div>
+        <div className="text-1xl text-black">
           Nationalities:
           <ul>
             {country?.country.map((countryInfo: CountryInfo, index: number) => (
@@ -99,7 +96,7 @@ export default async function Page({ params }: apiParam) {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="text-1xl text-black">
           {" "}
           How many people have this name: {count?.count}
         </div>
